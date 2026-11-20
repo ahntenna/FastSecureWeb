@@ -1,0 +1,9 @@
+# 직접 의존성 고정. 전이 의존성까지 고정하려면:
+#   pip install pip-tools && pip-compile --generate-hashes requirements.txt -o requirements.lock
+# 취약점 점검: pip install pip-audit && pip-audit -r requirements.txt
+fastapi==0.165.0
+uvicorn==0.54.0
+pydantic-settings==2.16.3
+SQLAlchemy==2.1.9
+alembic==1.20.1
+cryptography==50.0.2

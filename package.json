@@ -1,0 +1,19 @@
+{
+  "name": "fast-secure-web",
+  "version": "0.1.0",
+  "private": true,
+  "description": "보안 강화 웹 서비스 보일러플레이트 생성기 (FastAPI/Rust + Vue/React + SQLite + Docker)",
+  "type": "module",
+  "bin": {
+    "create-fast-secure-web": "create.mjs"
+  },
+  "scripts": {
+    "create": "node create.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "@clack/prompts": "^1.9.0"
+  }
+}

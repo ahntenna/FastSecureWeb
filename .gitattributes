@@ -1,0 +1,8 @@
+# 줄바꿈을 저장소·작업 폴더 모두 LF 로 고정한다.
+# Git for Windows 기본값(core.autocrlf=true)으로 클론하면 모든 파일이 CRLF 가 되는데,
+# 그러면 생성된 프로젝트의 docker.sh · nginx 설정 · Dockerfile 이 리눅스에서 깨진다.
+* text=auto eol=lf
+
+# 배치 파일만 Windows 줄바꿈 (cmd 는 LF 전용 bat 에서 label/goto 가 어긋날 수 있다)
+*.bat text eol=crlf
+*.cmd text eol=crlf

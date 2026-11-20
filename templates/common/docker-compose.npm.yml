@@ -1,0 +1,10 @@
+# 운영용 겹침 파일: web 을 Nginx Proxy Manager 와 같은 외부 Docker 네트워크에 연결한다.
+#   scripts/docker.sh npm up
+#
+# NPM 프록시 호스트 설정 (자세한 내용은 docs/DEPLOY.md)
+#   Forward Hostname: __PROJECT_NAME__-web      Forward Port: ports.env 의 WEB_PORT
+# 호스트 포트는 열지 않는다. 외부에 공개되는 것은 NPM 의 80/443 뿐이다.
+networks:
+  edge:
+    external: true
+    name: ${PROXY_NETWORK:-proxy}

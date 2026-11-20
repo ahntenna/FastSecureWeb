@@ -1,0 +1,10 @@
+# web 이미지의 빌드 컨텍스트(프로젝트 루트)에 적용된다. 허용 목록 방식:
+# 전부 제외한 뒤 필요한 것만 다시 넣는다. 개인키·.env·백엔드 소스는 컨텍스트에 들어가지 않는다.
+*
+!ports.env
+!secrets/server_sign_pub.txt
+!frontend
+frontend/node_modules
+frontend/dist
+frontend/.env
+frontend/.env.*
